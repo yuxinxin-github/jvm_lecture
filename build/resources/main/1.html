@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>radio 和 select 联动</title>
+    <script>
+        //点击radio进去函数
+        function operation(val) {
+
+            var radioValue = val.value;
+
+            if (radioValue == 1) {		//曹操
+                // var sel = document.getElementById('a');
+
+                sel.options[0].text = "魏国";
+            } else if (radioValue == 2) {//刘备
+                var sel = document.getElementById('national');
+                sel.options[0].text = "蜀国";
+            } else if (radioValue == 3) {//孙权
+                var sel = document.getElementById('national');
+                sel.options[0].text = "吴国";
+            } else if (radioValue == 4) {//张飞
+                var sel = document.getElementById('national');
+                sel.options[0].text = "蜀国";
+            } else if (radioValue == 5) {//周瑜
+                var sel = document.getElementById('national');
+                sel.options[0].text = "吴国";
+            } else if (radioValue == 6) {//夏侯惇
+                var sel = document.getElementById('national');
+                sel.options[0].text = "魏国";
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+<!-- radio -->
+<div>
+    <label>
+        <input id="a" type="radio" name="mt" value="1" onclick="operation(this);">
+        曹操
+    </label>
+    <label for="b" class="mwriw_d_r">
+        <input id="b" type="radio" name="mt" value="2" onclick="operation(this);">
+        刘备
+    </label>
+    <label for="c" class="mwriw_d_r">
+        <input id="c" type="radio" name="mt" value="3" onclick="operation(this);">
+        孙权
+    </label>
+    <label for="d" class="mwriw_d_r">
+        <input id="d" type="radio" name="mt" value="4" onclick="operation(this);">
+        张飞
+    </label>
+    <label for="e" class="mwriw_d_r">
+        <input id="e" type="radio" name="mt" value="5" onclick="operation(this);">
+        周瑜
+    </label>
+    <label for="f" class="mwriw_d_r">
+        <input id="f" type="radio" name="mt" value="6" onclick="operation(this);">
+        夏侯惇
+    </label>
+</div>
+<br/><br/><br/><br/><br/><br/>
+<!-- select  -->
+<div>
+    <select id="national" name="national">
+        <option value="蜀国" selected="selected" onclick="operation()">蜀国</option>
+        <option value="魏国">魏国</option>
+        <option value="吴国">魏国</option>
+
+    </select>
+</div>
+</body>
+
+</html>
